@@ -1,0 +1,190 @@
+/* reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dt,
+dd,
+dl,
+pre {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+/* style */
+
+body {
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  color: #21ce99;
+  background-color: #000;
+  background-image: url("../bg.webp");
+  background-repeat: repeat;
+  background-size: 500px;
+  margin: 1rem;
+}
+
+code {
+  color: white;
+  background-color: black;
+}
+
+p code {
+  display: inline-block;
+}
+
+pre {
+  background-color: black;
+  padding: 1rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+p {
+  padding-bottom: 1em;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+div.container {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 0 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header, footer {
+  padding: 1rem 0;
+}
+
+header h2 {
+  padding: 0;
+  font-size: 2.5em;
+}
+
+footer {
+  border-top: 1px solid;
+}
+
+hr {
+  border: 1px solid;
+}
+
+a {
+  color: #21ce99; /* Use the same green for consistency */
+  text-decoration: none; /* Remove underline */
+  border-bottom: 1px dashed #21ce99; /* Add dashed underline for a unique touch */
+  transition: color 0.3s ease; /* Smooth color transition for hover */
+}
+
+a:hover,
+a:focus {
+  color: #0fa56d; /* Slightly darker green on hover */
+  border-bottom-color: #0fa56d; /* Change the underline color on hover */
+}
+
+/* header */
+
+header nav ul li {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+header h1 {
+  padding-bottom: 0.1em;
+}
+
+/* article */
+
+article aside {
+  padding-bottom: 1rem;
+}
+
+article section {
+  padding-bottom: 1rem;
+}
+
+article aside dt {
+  font-weight: 700;
+  display: inline-block;
+  min-width: 4.5rem;
+}
+
+article aside dt:after {
+  content: ": ";
+}
+article aside dd {
+  display: inline-block;
+}
+
+article aside dd:after {
+  content: "";
+  display: block;
+}
+
+article aside ul.tags li {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+article figure {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+article figure + figure {
+  padding-bottom: 0;
+}
+
+div.highlight pre {
+  padding: 1em;
+  overflow: auto;
+}

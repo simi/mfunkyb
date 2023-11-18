@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <article>
+    <header><h2>{{ .Title }}</h2></header>
+
+    <aside>
+      <dl>
+        <div>
+          <dt>Author</dt>
+          <dd><a target="_blank" href="{{ .Param "authorLink" }}">{{ .Param "author" }}</a></dd>
+        </div>
+        <div>
+          {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := .Date | time.Format ":date_long" }}
+          <dt>Date</dt>
+          <dd><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></dd>
+        </div>
+        {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+      </dl>
+    </aside>
+
+    {{ .Content }}
+  </article>
+{{ end }}
