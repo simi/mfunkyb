@@ -7,17 +7,21 @@ author = "retro"
 authorLink = "https://github.com/simi"
 +++
 
-Nesnáším podzim! Veškerý volný čas, jenž se dá v léte smysluplně trávit nesmyslným tlacháním u piva a kořalky, v hospodě, venku na zahrádce, s rodinou a přáteli, najednou není čím naplnit. A tak si hledávám zábavu jinou - digitální. Už ani nevím proč, ale měl jsem na podzim 2022 nápad přeložit hru [Peglin](https://gedig.itch.io/peglin) do češtiny. Začal jsem se zajímat jak takové komunitní překlady vznikají, objevil jsem [prekladyher.eu](https://prekladyher.eu) no a co se stalo dál asi tušíte podle nadpisu. Správně, Peglin jsem nikdy nepřeložil. Narazil jsem ovšem na [žádost o pomoc s lokalizací cca 30 let staré hry](https://prekladyher.eu/vlakno/indiana-jones-and-the-fate-of-atlantis.4333/#post-54513).
+![To get in mood, I do recommend to listen to official soundtract while reading.](00-intro.jpg "To get in mood, [official soundtrack](https://www.youtube.com/watch?v=mwQiHqAuBEY) is recommended to be played while reading.")
 
-*Poznámka autora: Ano, datum té žádosti (ani mé odpovědi) moc nezapadá do podzimu. To však nevyvrací fakt, že nesnáším podzim.*
+## Prologue
 
-# Seznámení se hrou
+I hate autumn! All the free time you can spend in summer chatting pointlessly over beer and liquor, in the pub, in the garden, with family and friends, suddenly has nothing to fill it. And so I start looking for other forms of entertainment - digital ones. I don't even know why, but in the autumn of 2022 I had the idea of translating the game [Peglin](https://gedig.itch.io/peglin) into English. I started researching how such community translations are made. I discovered [prekladyher.eu](https://prekladyher.eu) and you can guess what happened next by reading the title. Right, I never translated Peglin. However, I did come across [request for help](https://prekladyher.eu/vlakno/indiana-jones-and-the-fate-of-atlantis.4333/#post-54513) with [localising](https://en.wikipedia.org/wiki/Language_localisation) a 30 years old game.
 
-Hru "[Indiana Jones and the Fate of Atlantis](https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Fate_of_Atlantis)" (dále jen Indy4) jsem jako malý chvilku hrál, ale protože byla anglicky, tak jsem moc netušil, co se tam děje. Ovšem dostala se ke mě česká verze předchozí hry ze série - "[Indiana Jones and the Last Crusade](https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Last_Crusade)" (dalé Indy3) a u té jsem vytuhnul na opravdu dlouho. Tušil jsem tedy cca do čeho jdu. Klasická [Lucasfilm Games](https://www.lucasfilm.com/what-we-do/games/) adventura postavená na [SCUMM enginu](https://en.wikipedia.org/wiki/SCUMM).
+*Author's note: Yes, the date of the request (and my reply) doesn't really fit with autumn. But that doesn't negate the fact that I hate autumn.*
 
-Sehnal jsem si tedy kopii (*tentokrát již legální na [GOGu](https://www.gog.com/game/indiana_jones_and_the_fate_of_atlantis), a pro jistotu jsem koupil rovnou in [Indy3](https://www.gog.com/en/game/indiana_jones_and_the_last_crusade) a tím splatil jistý starý dluh*). Už tady na mě číhala první nástraha. Indy4 bylo vydáno v několika verzích. GOG prodává tzv. "Talkie" verzi, ta obsahuje i kompletní anglický dabing. Pro jistotu jsem ještě našel původní DOS verzi na archive.org a porovnal je. Soubory jsou stejné a přesně tuhle verzi jsem hledal. Hru jsem úspešně nainstaloval a spustil (na Linuxu přes [ScummVM](https://www.scummvm.org/)).
+## Getting the game
 
-Dle [ScummVM wiki Indy4](https://wiki.scummvm.org/index.php/Indiana_Jones_and_the_Fate_of_Atlantis) obsahuje 3 hlavní datové soubory. Ty jsem našel v adresáří se hrou (v mém případě `/opt/Games/Indiana Jones and the Fate of Atlantis`) ve složce `data`.
+I played the game "[Indiana Jones and the Fate of Atlantis](https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Fate_of_Atlantis)" (aka Indy4) for a while when I was a kid, but since it was in English, I didn't really know what was going on. However, I got the Czech version of the previous game in the series - "[Indiana Jones and the Last Crusade](https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Last_Crusade)" (aka Indy3) - and it made me pass out for a really long time. I knew what to expect. Classic [Lucasfilm Games](https://www.lucasfilm.com/what-we-do/games/) adventure game based on the [SCUMM](https://en.wikipedia.org/wiki/SCUMM) engine.
+
+I bought the game (*at [GOG](https://www.gog.com/game/indiana_jones_and_the_fate_of_atlantis) and just to be on the safe side, I bought [Indy3](https://www.gog.com/en/game/indiana_jones_and_the_last_crusade) to settle some old debts*). Here was the first challenge for me. Indy4 has been released in several versions. GOG sells a so-called "talkie" version, which includes a full English voice-over. Just to be sure, I found the original DOS version on archive.org and compared them. The files are the same and this is the version I was looking for. I successfully installed and ran the game (via [ScummVM](https://www.scummvm.org/) on Linux).
+
+According to the [ScummVM wiki](https://wiki.scummvm.org/index.php/Indiana_Jones_and_the_Fate_of_Atlantis) Indy4 contains 3 main data files. I found them in the game directory (in my case `/opt/Games/Indiana Jones and the Fate of Atlantis`) in the `data` folder.
 
 ```
 [retro@retro  Indiana Jones and the Fate of Atlantis]❤ ls -lh data
@@ -28,24 +32,24 @@ total 153M
 drwx------. 2 retro retro 4.0K Oct 15 14:00 other
 ```
 
-Prostou dedukcí (podle velikosti souborů) jsem usoudil, že v souboru `MONSTER.SOU` bude dabing. To jsem si i potvrdil porovnáním se soubory z verze bez dabingu, kde tento soubor úplně chybí. Stejně tak jsem se podíval na [původní překlad (bez české lokalizace)](https://www.idnes.cz/hry/cestiny/hry/indiana-jones-4-and-the-fate-of-atlantis.A061005_59388_bw-cestiny-hry_bw). Ten obsahuje právě soubory `ATLANTIS.000` a `ATLANSTIS.001`. Překlad jsem stáhl a aplikoval. Hru mám tedy česky, ale české znaky (`áčďéěíňóřšťúůýž` a `ÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ`) chybí.
+By simple deduction (based on the size of the files) I assumed that the `MONSTER.SOU` file would contain the voiceover. I confirmed this by comparing it with the files from the no-voice-over version, where this file is completely missing. I also looked at the [original translation (without Czech localisation)](https://www.idnes.cz/hry/cestiny/hry/indiana-jones-4-and-the-fate-of-atlantis.A061005_59388_bw-cestiny-hry_bw). That contains only the files `ATLANTIS.000` and `ATLANSTIS.001`. I downloaded the translation and applied it. Now I have the game in Czech, but the Czech characters (`áčďéěěíňóřštúúúýž` and `ÁČĎÉĚĚĚĚÍÍÍĚŘŠŤÚŮÝŽ`) are missing.
 
-**A to je právě výzva pro mě. Naučit tuhle 30 let starou hru vykreslit správně například `č`.** Překlad z roku 2006 nahrazuje všechny znaky obsahující diakritické znaménko znaky bez něho. Čili místo `Stlač MEZERNÍK` hra vykreslí `Stlac MEZERNIK`.
+**And that's the challenge for me. "Persuade" this 30 year old game to correctly render, for example, `č`.** The 2006 translation replaces all characters with diacritics with characters without diacritics. So instead of `Stlač MEZERNÍK`, the game will render `Stlac MEZERNIK`.
 
-![(1) překlad obsahuje c místo č](01-old-c.jpg "(1) překlad obsahuje c místo č")
+![(1) translation contains c instead of č](01-old-c.jpg "(1) translation contains c instead of č")
 
-## Práce s herními soubory
+## Working with game files
 
-Ačkoliv se může zdát, že práce na 30 let staré hře má jen samé nevýhody, je tu i jistá výhoda. Lidstvo mělo 30 let času (čili 30 podzimů) tuto hru (bez zdrojových kodů) pomocí [reverzního inženýrství](https://en.wikipedia.org/wiki/Reverse_engineering) rozebrat a zdokumentovat. A díky tomu existuje sada nástrojů pro SCUMM hry jménem [scummtr](https://github.com/dwatteau/scummtr). Pár chvilek hledání po [fórech](https://forums.scummvm.org/), pár položených otázek na [ScummVM Discordu](https://discord.gg/4cDsMNtcpG) a nakonec i přečtené [README](https://github.com/dwatteau/scummtr/blob/main/README.md)... a hned mám jistou představou co tyto nástroje umí.
+Although working on a 30 year old game may seem to have only disadvantages, there are some advantages. People have had 30 years (*30 autumns*) to disassemble and document this game (without source code) using [reverse engineering](https://en.wikipedia.org/wiki/Reverse_engineering). And because of this, there is a toolkit for SCUMM games called [scummtr](https://github.com/dwatteau/scummtr). A few moments of searching the [forums](https://forums.scummvm.org/), a few questions asked on the [ScummVM Discord](https://discord.gg/4cDsMNtcpG), and finally reading the [README](https://github.com/dwatteau/scummtr/blob/main/README.md)... and now I have an idea of what these tools can do.
 
-Pro začátek budu potřebovat vyexportovat ze hry texty. K tomu slouží program `scummtr` s parametrem `-o`. A naopak importovat text do hry lze stejným programem s parameterm `-i`.
+First of all, I need to export the game texts. The `scummtr` program with the `-o` parameter is useful for this. The other way round you can import the text into the game using the same program with the `-i` parameter.
 
 ```
 $ /cesta/k/scummtr -g atlantis -p /cesta/k/indy4 -r -o -f texts.txt
 $ /cesta/k/scummtr -g atlantis -p /cesta/k/indy4 -r -i -f texts.txt
 ```
 
-Jelikož už teď vím, že mě nebude bavit pořád dokola psát tenhle příkaz (ani ty další), a také tuším, že ho budu používat často, začnu si to trochu organizovat. Na Linuxu je dobrá (moje) volba [Makefile](https://en.wikipedia.org/wiki/Make_(software)). *Na Windows by asi stačil [bat](https://en.wikipedia.org/wiki/Batch_file) soubor.* Dalé tuším že budu potřebovat hru spouštět pro testování a jako bonus si můžu přednastavit cesty k souborům a zkrátit tak příkazy na minimum. *Do souboru budeme průběžně přidávat další úlohy.*
+Since I already know that I will not enjoy typing this command (or the others) over and over again, and since I assume I will be using it a lot, I will start to organise it a bit. On Linux, a good (my) choice is [Makefile](https://en.wikipedia.org/wiki/Make_(software)). *On Windows, a [bat](https://en.wikipedia.org/wiki/Batch_file) file would probably do the trick.* I also assume I'll need to run the game for testing, and as a bonus, I can specify file paths to reduce commands to a bare minimum. *I will be adding more tasks to the file continuously.*
 
 
 ```
@@ -62,19 +66,19 @@ import-text:
 	$(SCUMMTR_BIN_PATH)/scummtr -g atlantis -p $(INDY4_DATA_PATH) -r -i -f texts.txt
 ```
 
-Stačí pustit `make export-text` a ve stejné složce se vytvoří soubor `texts.txt` s texty ze hry. Texty jsou již česky bez diakritiky, protože jsem na hru aplikoval původní češtinu. Jako jednoduchý test stačí v souboru najít testovací řetězec `Stlac MEZERNIK`, přepsat ho na `Stlač MEZERNIK`, uložit a naimportovat zpět do hry spuštěním `make import-text`.
+Simply running `make export-text` will create a `texts.txt` file in the same folder with the texts from the game. The texts are already in Czech without diacritics, because I applied the original Czech to the game. As an simple test, just find the test string `Stlac MEZERNIK` in the file, rewrite it to `Stlač MEZERNIK`, save it and import it back into the game by running `make import-text`.
 
-*Za povšimnutí stojí že používám editor Notepad++ (přes Wine, nemá Linuxovou nativní verzi) a kódování OEM 852. Jak jsem k tomu dospěl vysvětlím později, byl to jeden z největších oříšků. V této fázi by fungovalo jakékoliv dobové (DOS) kódování.*
+*Note that I'm using the Notepad++ editor (via Wine, there's no native Linux version) and OEM 852 encoding. I'll explain how I figured this out later, it was one of the hardest nuts to crack. At this stage, any era (DOS) encoding would work.
 
-![(1) upravený text s diakritikou, (2) kódování OEM 852](02-editor.jpg "(1) upravený text s diakritikou, (2) kódování OEM 852")
+![(1) modified accented text, (2) OEM 852 encoding](02-editor.jpg "(1) modified accented text, (2) OEM 852 encoding")
 
-Nakonec stačí pustit `make test`, po chvilce zmáčknout mezerník (což zapauzuje hru) a podívat se co hra vykreslí. Jelikož úkol je přidat vykreslování diakritiky, předpokládám, že hra nevykreslí `č`, a mám pravdu. Místo znaku `č` nevykreslí hra pro jistotu nic.
+Finally, just run `make test`, hit the space bar after a while (which will pause the game) and see what the game renders. Since the challenge is to add diacritics, I assume the game won't render `č`, and I'm right. Instead of the `č` character, the game will render nothing, to be safe.
 
-![(1) hra vynechá č](03-missing-c.jpg "(1) hra vynechá č")
+![(1) the game misses the č](03-missing-c.jpg "(1) the game misses the č")
 
-# Úprava herního fontu
+# Modifying the game font
 
-Sada nástrojů `scummtr` obsahuje i nástroj `scummfont`, kterým je možné (alespoň podle `README`) vyexportovat font z herních souborů jako [bitmapu](https://en.wikipedia.org/wiki/Bitmap) (formát bmp, *ten otevře i Malování*). Chvilku mi trvalo, než jsem pochopil, jak tohle funguje. Tento nástroj se totiž nepoužívá na herní soubory (`ATLANTIS.00X`) přímo, ale na soubory s fontem. Nakonec jsem zjistil (hledání, pročítání fór, Discord, ...), žě k těm je možno se dopracovat za pomocí nástroje `scummrp` s parametrem `-o`, který umí soubory `ATLANTIS.00X` "rozbalit". A stejně tak je umí s parametrem `-i` i "zabalit". Opět upravím `Makefile`, přidám dvě úlohy a jako cílovou složku volím `export`.
+The `scummtr` toolkit includes a `scummfont` tool which (at least according to the `README`) can export a game font from game files as a [bitmap](https://en.wikipedia.org/wiki/Bitmap) (bmp format, *this will also open Painting*). It took me a while to understand how this works. Because this tool is not applied directly to the game files (`ATLANTIS.00X`), but to the font files. Eventually I found out (searching, reading forums, Discord, ...) that these can be accessed using the `scummrp` tool with the `-o` parameter, which can "unpack" the `ATLANTIS.00X` files. And it can also "wrap" them with the `-i` parameter. Again, I edit the `Makefile`, adding two tasks and selecting `export` as the destination folder.
 
 ```
 export-data:
@@ -84,7 +88,7 @@ import-data:
 	$(SCUMMTR_BIN_PATH)/scummrp -i -g atlantis -p $(INDY4_DATA_PATH) -d export
 ```
 
-Ve složce `export` už pak konečně v adresáři `DISK_0001/LECF/LFLF_0068` nacházím soubory `CHAR_000X`. No a s těmi už umí pracovat program `scummfont`. S parametrem `o` umí herní fonty převést na bitmapu a s parametrem `i` zase převést bitmapu zpět na herní font. `Makefile` se opět rozrůstá. *Malý spoiler: je to už poslední rozšíření Makefile.*
+In the `export` folder I finally find the `CHAR_000X` files in the `DISK_0001/LECF/LFLF_0068` directory. The `scummfont` program can work with them. With the `o` parameter it can convert game fonts to bitmap and with the `i` parameter it can convert bitmap back to game font. The `Makefile` grows again. *Slight spoiler: this is the last expansion of the Makefile.
 
 ```
 export-fonts:
@@ -102,45 +106,45 @@ import-fonts:
 	$(SCUMMTR_BIN_PATH)/scummfont i export/DISK_0001/LECF/LFLF_0068/CHAR_0005 font-5.bmp
 ```
 
-Bitmapy už lze lehce vizuálně prozkoumat. Já používám [GIMP](https://www.gimp.org/), ale tady by opravdu postačilo i obyčejné [Malování](https://cs.wikipedia.org/wiki/Malov%C3%A1n%C3%AD_(Windows)) dostupné ve Windows. Font který hledám protože bych rád naučil `č` vypadá jako font v souboru `font-1.bmp`. Bitmapa obsahuje jen "dlouou nudli" znaků pod sebou. V tomto fontu má každý znak "chlívek" o velikosti 13x16px a některé "chlívky" jsou prázdné (tam asi hra hledá právě chybějící znaky a nevyrenderuje nic).
+Bitmaps can now be explored visually. I use [GIMP](https://www.gimp.org/), but the regular [Paint](https://cs.wikipedia.org/wiki/Malov%C3%A1n%C3%AD_(Windows)) available in Windows would really do the trick here. The font I'm looking for (because I want to learn it `č`) looks like the font in the file `font-1.bmp`. The bitmap contains a "long noodle" of characters underneath. In this font, each character has a 13x16px "box" and some of the "boxes" are empty (I guess that's where the game looks for the missing characters and renders nothing).
 
-![ukázka fontu otevřeného v GIMPu jako bitmapa](04-font-showcase.jpg "ukázka fontu otevřeného v GIMPu jako bitmapa")
+![sample font opened in GIMP as a bitmap](04-font-showcase.jpg "sample font opened in GIMP as a bitmap")
 
-Abych si ověřil, že upravená bitmapa je správně převedená zpět na font, a úspěšně naimportována do hry, upravím například znak `S`.
+To check that the edited bitmap is correctly converted back into a font and successfully imported into the game, I edit the 'S' character, for example.
 
-![(1) původní znak S, (2) upravený znak S pro test](05-font-change.jpg "(1) původní znak S, (2) upravený znak S pro test")
+![(1) original S character, (2) modified S character for test](05-font-change.jpg "(1) original S character, (2) modified S character for test")
 
-No a správně použitý `Makefile` (`make import-fonts import-data import-text`) nám teď udělá všechno co potřebujeme. Důležité je pouštět `import-fonts` a až potom `import-data`, protože `import-fonts` uloží font zpět do rozbalených dat v herním formátu a `import-data` tyto data zabalí a zkopíruje zpět do složky se hrou.
+Well, a properly used `Makefile` (`make import-fonts import-data import-text`) will now do everything we need. It's important to run `import-fonts' and then `import-data', because `import-fonts' saves the font back to the unpacked data in game format, and `import-data' packs and copies that data back to the game folder.
 
-![(1) upravený znak vykreslený hrou](06-font-imported.jpg "(1) upravený znak vykreslený hrou")
+![(1) modified game-rendered character](06-font-imported.jpg "(1) modified game-rendered character")
 
-## Lokalizace fontu
+## Font localization
 
-V GIMPu (nebo klidně v Malování) stačí domalovat do patříčných "chlívků" české znaky a tím pokoříme výzvu. Kam ale přesně domalovat třeba to `č`?
+In GIMP (or Paint), all you have to do is paint the Czech characters into the "boxes" provided, and the challenge is over. But where should I paint the `č`?
 
-*Poznámka autora: Tady jsem se hodně zapotil a párkrát to málem vzdal.*
+*Author's note: I sweated a lot on this one and almost gave up a couple of times.
 
-První nápad byl zkusit to "[hrubou silou](https://en.wikipedia.org/wiki/Brute-force_attack)". Do každého prázdného "chlívku" v bitmapě namalovat něco unikátního (třeba symbol, nebo číslo), upravovat průběžně testovací text a zapisovat si který znak na jaké pozici v bitmapě se vykreslí. I jsem začal bitmapu takhle upravovat. Ale nechtělo se mi tento dost časově náročný proces opakovat třicetkrát. Naštěstí jsem si všiml, že v bitmapě jsou i německé znaky (například `ß`) a že tam jsou čísla v řadě za sebou, ale písmena jsou "náhodně". 
+My first idea was to try "[brute force](https://en.wikipedia.org/wiki/Brute-force_attack)". Draw something unique (like a symbol or a number) in each empty "slot" in the bitmap, edit the test text continuously, and note which character is drawn in which position in the bitmap. I started editing the bitmap in this way. But I didn't want to repeat this rather time-consuming process thirty times. Fortunately, I noticed that there were German characters in the bitmap (for example `ß`) and that there were numbers in a sequence, but the letters were "random". 
 
-To mě přivedlo na stopu, že znaky nejsou v bitmapě náhodně, ale podle nějákého systému. Rychle jsou koukl do [ASCII tabulky](https://cs.wikipedia.org/wiki/ASCII#Tabulka_ASCII_k%C3%B3d%C5%AF) a i tam jsou čísla za sebou a písmena pak "náhodně". Porovnal jsem tedy pozici náhodného znaku v bitmapě a v ASCII tabulce. Například znak pro vykřičník (`!`) má v ASCII tabulce decimální hodnotu `33` a v bitmapě začíná znak vyříčníku na pozici `528` což je zároveň 33 * 16 (*16px je výška jednoho "chlívku" v bitmapě*). Zároveň jsem zjistil že bitmapa má na výšku 4096px, což odpovídá místu pro 256 "chlívků" po 16px a to je maximální počet znaků pro osmibitové znakové sady, které byly používané v DOSu. Našel jsem si teda znakovou sadu pro středoevropské jazyky používanou v systému DOS (CP852, také nazývanou OEM 852) a v ní našel pozici pro znak `č` (`9F` neboli `159`).
+This led me to the clue that the characters are not randomly in the bitmap, but according to some system. A quick look at the [ASCII table](https://cs.wikipedia.org/wiki/ASCII#Tabulka_ASCII_k%C3%B3d%C5%AF) and even there the numbers are in a row and then the letters are "random". So I compared the position of the random character in the bitmap and in the ASCII table. For example, the exclamation mark (`!`) has a decimal value of `33` in the ASCII table, and in the bitmap the exclamation mark starts at position `528`, which is also 33 * 16 (*16px is the height of a "box" in the bitmap*). I also found out that the bitmap has a height of 4096px, which corresponds to space for 256 "boxes" of 16px each, and this is the maximum number of characters for the 8-bit character sets used in the DOS era. So I looked up the character set for Central European languages used in DOS (CP852, also called OEM 852) and found a position for the `č` character (`9F` or `159`).
 
-![znak č v znakové sadě CP852](07-c-cp852.jpg "znak č v znakové sadě CP852")
+![character č in the CP852 character set](07-c-cp852.jpg "character č in the CP852 character set")
 
-Lehce (159 * 16px = 2544px) jsem vypočítal pozici pro "chlívek" pro znak `č`, a protože byl prázdný, tak jsem tam `č` domaloval (*jen jsem zkopíroval `c` a přimaloval háček*).
+I just calculated (159 * 16px = 2544px) the position for the "box" for the character "c", and since it was empty, I painted the "č" in. (*just copied the "c" and painted the hook in*).
 
-![nový znak ve fontu "č"](08-new-c.jpg "nový znak ve fontu - č")
+![new character in font " č"](08-new-c.jpg "new character in font - č")
 
-Soubor s texty jsem uložil v kódování OEM 852 (*proto ten Notepad++, nepodařilo se mi najít textový editor na Linuxu, který by uložil soubor správně*). Texty i font jsem naimportoval do hry (*<3 `Makefile`*) a hra správně zobrazila `č`! 
+I saved the text file in OEM 852 encoding (*that's why the Notepad++, I couldn't find a text editor on Linux that would save the file correctly*). I imported the text and font into the game (*<3 `Makefile`*) and the game correctly displayed the `č`! 
 
-![nový znak ve fontu "č" ve hře](09-c-ingame.jpg "nový znak ve fontu - č - ve hře")
+![new character in the font "č" in the game](09-c-ingame.jpg "new character in the font - č - in the game")
 
-## Dokončení
+## Finish
 
-Nyní už jen stačilo projet celou CP852 tabulku, vypočítat si pozici jednotlivých "chlívků" a domalovat do nich potřebné znaky. A to všechno dvakrát, protože je potřeba "počeštit" dva fonty. Jeden je použit pro uživatelské rozhraní (například několikrát zmíněný dialog pauzy) a druhý je použít pro dialogy osob ve hře. Font pro dialogy osob má jiný rozměr "chlívku" (39x10px), čili například č je na pozici 159 * 10px = 1590px.
+Now all I had to do was go through the whole CP852 table, calculate the position of each "box" and paint in the necessary characters. And all this twice, because there are two fonts to "localise". One is used for the user interface (for example, the aforementioned pause dialogue), and the other is used for the in-game character dialogs. The character dialogue font has a different "box" size (39x10px), so the č, for example, is at position 159 * 10px = 1590px.
 
-Domalování jednotlivých znaků zabralo pár hodin, ale byla to v podstatě příjemná práce, protože už jsem věděl, že výzva je pokořena. Někdy to chtělo trochu důvtipu a vymslet jak přidat háček nebo čárku do omezeného prostoru. Konečný výsledek [můžete posoudit sami](https://prekladyher.eu/preklady/indiana-jones-and-the-fate-of-atlantis-1992.1341/updates#resource-update-3906).
+It took a couple of hours to finish painting each character, but it was essentially a satisfying job because I knew the challenge had already been accomplished. Sometimes it took a bit of ingenuity to figure out how to add a hook or a comma in a limited space. You can judge the end result for yourselves (https://prekladyher.eu/preklady/indiana-jones-and-the-fate-of-atlantis-1992.1341/updates#resource-update-3906]).
 
-![plně lokalizovaná hra](10-final.jpg "plně lokalizovaná hra s UI")
-![plně lokalizovaná hra](11-final.jpg "plně lokalizovaná hra v cutscéně")
+![fully localized game](10-final.jpg "fully localized game with UI")
+![fully localized game](11-final.jpg "fully localized game in cutscene")
 
-*Když tak vzpomínám,... tenhle podzim nebyl tak špatnej. Vždyť já mám ten podzim vlastně nakonec rád.*
+*That autumn wasn't so bad, now that I think about it. I actually like autumns.*
