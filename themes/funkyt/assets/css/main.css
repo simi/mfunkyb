@@ -188,3 +188,26 @@ div.highlight pre {
   padding: 1em;
   overflow: auto;
 }
+
+article {
+  position: relative; /* Ensure the article is a positioned container */
+}
+
+article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px; /* Adjust as needed for the desired overlap */
+  width: 50px; /* Adjust width to match desired image size */
+  height: 100%;
+  background: url('../ij.png') no-repeat left / cover;
+  z-index: -1; /* Place it behind the content */
+  pointer-events: none; /* Make it non-interactive */
+  filter: grayscale(50%) brightness(0.8); /* Dim the colors for a subdued look */
+  transition: left 1s, width 1s;
+}
+
+article:hover::before {
+  left: -150px; /* Adjust as needed for the desired overlap */
+  width: 150px; /* Adjust width to match desired image size */
+}

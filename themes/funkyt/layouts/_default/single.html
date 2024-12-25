@@ -6,7 +6,7 @@
       <dl>
         <div>
           <dt>Author</dt>
-          <dd><a target="_blank" href="{{ .Param "authorLink" }}">{{ .Param "author" }}</a></dd>
+          <dd>{{ .Param "author" }} (<a target="_blank" href="{{ .Param "authorLinkG" }}">GitHub</a>, <a target="_blank" href="{{ .Param "authorLinkX" }}">X</a>)</dd>
         </div>
         <div>
           {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}

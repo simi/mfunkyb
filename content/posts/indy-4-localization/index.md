@@ -1,10 +1,12 @@
 +++
 title = "Localizing 'Indiana Jones and the Fate of Atlantis' 30 years after release"
-date = 2023-11-18
+date = 2024-12-25
 draft = false
 tags = ['digital archeology', 'retro','localization','game']
 author = "retro"
-authorLink = "https://github.com/simi"
+authorLinkG = "https://github.com/simi"
+authorLinkX = "https://x.com/retrorubies"
+summary = 'Ever wondered what it takes to fully localize a 30-year-old game? Dive into journey of translating Indiana Jones and the Fate of Atlantis, where autumn boredom sparks a fascinating challenge. From reverse-engineering game files to painting custom characters into retro fonts, this post unpacks the tools, tricks, and tenacity needed to make a classic adventure accessible in a new language. How do you "teach" a game to display characters it was never designed for? And why might you end up loving the process as much as the result?'
 +++
 
 ![To get in mood, I do recommend to listen to official soundtract while reading.](00-intro.jpg "To get in mood, [official soundtrack](https://www.youtube.com/watch?v=mwQiHqAuBEY) is recommended to be played while reading.")
