@@ -1,9 +1,9 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range site.RegularPages }}
-    <article>
+    <article class="{{ .Param "articleClass" }}">
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      <p>{{ .Param "summary" }}</p>
+      <p>{{ .Param "summary" | markdownify }}</p>
     </article>
   {{ end }}
 {{ end }}

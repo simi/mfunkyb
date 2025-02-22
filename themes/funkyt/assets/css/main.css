@@ -86,6 +86,7 @@ p {
 h1 {
   font-size: 2.5em;
   font-weight: 700;
+  padding-bottom: 0.5rem;
 }
 
 h2 {
@@ -189,25 +190,28 @@ div.highlight pre {
   overflow: auto;
 }
 
-article {
+article.anim {
   position: relative; /* Ensure the article is a positioned container */
 }
 
-article::before {
+article.anim::before {
   content: '';
   position: absolute;
   top: 0;
   left: -50px; /* Adjust as needed for the desired overlap */
   width: 50px; /* Adjust width to match desired image size */
   height: 100%;
-  background: url('../ij.png') no-repeat left / cover;
   z-index: -1; /* Place it behind the content */
   pointer-events: none; /* Make it non-interactive */
   filter: grayscale(50%) brightness(0.8); /* Dim the colors for a subdued look */
   transition: left 1s, width 1s;
 }
 
-article:hover::before {
+article.anim:hover::before {
   left: -150px; /* Adjust as needed for the desired overlap */
   width: 150px; /* Adjust width to match desired image size */
+}
+
+article.ij::before {
+  background: url('../ij.png') no-repeat left / cover;
 }

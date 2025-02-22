@@ -2,7 +2,9 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    <p>{{ .Param "summary" }}</p>
+    <article class="{{ .Param "articleClass" }}">
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <p>{{ .Param "summary" | markdownify }}</p>
+    </article>
   {{ end }}
 {{ end }}
