@@ -1,3 +1,4 @@
+baseUrl = 'https://apicko.cz'
 languageCode = 'en-us'
 title = "mysterious greenish notepad"
 theme = 'funkyt'
