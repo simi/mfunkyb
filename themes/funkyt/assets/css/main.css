@@ -215,3 +215,15 @@ article.anim:hover::before {
 article.ij::before {
   background: url('../ij.png') no-repeat left / cover;
 }
+
+a.czech {
+ border: 1px dotted #21ce99;
+ padding: 1rem;
+ display: flex;
+ width: 100%;
+}
+
+a.czech svg.flag{
+  margin-right: 1rem;
+  min-width: 45px;
+}

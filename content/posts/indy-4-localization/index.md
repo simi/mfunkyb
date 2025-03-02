@@ -8,6 +8,7 @@ authorLinkG = "https://github.com/simi"
 authorLinkX = "https://x.com/retrorubies"
 articleClass = "anim ij"
 summary = 'Ever wondered what it takes to fully [localize](https://en.wikipedia.org/wiki/Localization) a 30-year-old game? Dive into journey of localizating [Indiana Jones and the Fate of Atlantis](https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Fate_of_Atlantis), where autumn boredom sparks a fascinating challenge. From [reverse-engineering](https://en.wikipedia.org/wiki/Reverse_engineering) game files to painting custom characters into retro fonts, this post unpacks the tools, tricks, and tenacity needed to make a classic adventure fully accessible in a new language. How do you "teach" a game to display characters it was never designed for? And why might you end up loving the process as much as the result?'
+czechLink = "https://www.high-voltage.cz/2025/lokalizace-indiana-jones-and-the-fate-of-atlantis-30-let-po-vydani/"
 +++
 
 ![To get in mood, I do recommend to listen to official soundtract while reading.](00-intro.jpg "To get in mood, [official soundtrack](https://www.youtube.com/watch?v=mwQiHqAuBEY) is recommended to be played while reading.")
